@@ -8,7 +8,7 @@ function initUi()
   app.registerUi({["menu"] = "Cycle through eraser type", ["callback"] = "eraser", ["accelerator"] = "<Control><Shift>e"});
   app.registerUi({["menu"] = "Cycle through drawing type", ["callback"] = "drawingtype", ["accelerator"] = "<Control><Shift>v"});
   app.registerUi({["menu"] = "Cycle through colors", ["callback"] = "color", ["accelerator"] = "<Control><Shift>c"});
-  app.registerUi({["menu"] = "Toggle Scrolling", ["callback"] = "scroll", ["accelerator"] = "<Control><Shift>h"});
+  app.registerUi({["menu"] = "Toggle Scrolling", ["callback"] = "scroll", ["accelerator"] = "<Control><Shift>b"});
 end
 
 
