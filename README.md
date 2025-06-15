@@ -10,3 +10,7 @@ If you want to override the plugin directory, install with:
 ```
 PLUGIN_DIR="my-plugin-dir" make clean install
 ```
+
+## Possible shortcuts
+
+All the available commands are listed in [ActionType.enum.h - Github](https://github.com/xournalpp/xournalpp/blob/release-1.2/src/core/enums/ActionType.enum.h).
