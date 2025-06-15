@@ -64,7 +64,7 @@ local currentEraser = 1
 local drawingtypeList = {"TOOL_DRAW_RECT", "TOOL_DRAW_ELLIPSE", "TOOL_DRAW_ARROW", "RULER", "TOOL_DRAW_SPLINE", "SHAPE_RECOGNIZER"} -- Don't include coordinate system and default tool
 local currentDrawingtype = 1
 
-local toggleList = {"PEN", "HAND"}
+local toggleList = {"tool", "HAND"}
 local currentToggle = 1
 
 function color()
@@ -87,6 +87,7 @@ end
 
 function tool()
   currentTool = currentTool % #toolList + 1
+  currentToggle = 1  -- Reset to "tool", so that next click turns on HAND mode again
   if (toolList[currentTool] == "SELECTION") then
     app.uiAction({["action"] = "ACTION_TOOL_SELECT_" .. selectList[currentSelect]})
     print("ACTION_TOOL_SELECT_" .. selectList[currentSelect])
@@ -110,6 +111,11 @@ end
 
 function scroll()
   currentToggle = currentToggle % #toggleList + 1
-  app.uiAction({["action"] = "ACTION_TOOL_" .. toggleList[currentToggle]})
-  print("ACTION_TOOL_" .. toolList[currentTool])
+  if (toggleList[currentToggle] == "tool") then
+    app.uiAction({["action"] = "ACTION_TOOL_" .. toolList[currentTool]})
+    print("ACTION_TOOL_" .. toolList[currentTool])
+  else
+    app.uiAction({["action"] = "ACTION_TOOL_HAND"})
+    print("ACTION_TOOL_HAND")
+  end
 end
