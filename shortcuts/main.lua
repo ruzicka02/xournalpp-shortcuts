@@ -55,13 +55,13 @@ local currentLinestyle = 1
 local selectList = {"RECT", "REGION", "OBJECT"} -- don't use play selection tool
 local currentSelect = 1
 
-local toolList = {"PEN", "ERASER", "HILIGHTER", "SELECTION"}
+local toolList = {"PEN", "ERASER", "HIGHLIGHTER", "SELECTION"}
 local currentTool = 1
 
 local eraserList = {"STANDARD", "DELETE_STROKE"} -- I don't use WHITEOUT
 local currentEraser = 1
 
-local drawingtypeList = {"TOOL_DRAW_RECT", "TOOL_DRAW_CIRCLE", "TOOL_DRAW_ARROW", "RULER", "TOOL_DRAW_SPLINE", "SHAPE_RECOGNIZER"} -- Don't include coordinate system and default tool
+local drawingtypeList = {"TOOL_DRAW_RECT", "TOOL_DRAW_ELLIPSE", "TOOL_DRAW_ARROW", "RULER", "TOOL_DRAW_SPLINE", "SHAPE_RECOGNIZER"} -- Don't include coordinate system and default tool
 local currentDrawingtype = 1
 
 local toggleList = {"PEN", "HAND"}
