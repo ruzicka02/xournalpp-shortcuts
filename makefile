@@ -1,6 +1,6 @@
 .PHONY = clean install
 
-PLUGIN_DIR ?= /usr/share/xournalpp/plugins
+PLUGIN_DIR ?= $(HOME)/.var/app/com.github.xournalpp.xournalpp/config/xournalpp/plugins
 PLUGIN_SHORTCUTS = shortcuts
 
 clean:
