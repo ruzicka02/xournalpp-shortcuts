@@ -58,7 +58,7 @@ local currentSelect = 1
 local toolList = {"PEN", "ERASER", "HIGHLIGHTER", "SELECTION"}
 local currentTool = 1
 
-local eraserList = {"STANDARD", "DELETE_STROKE"} -- I don't use WHITEOUT
+local eraserList = {"STANDARD", "DELETE_STROKE", "WHITEOUT"}
 local currentEraser = 1
 
 local drawingtypeList = {"TOOL_DRAW_RECT", "TOOL_DRAW_ELLIPSE", "TOOL_DRAW_ARROW", "RULER", "TOOL_DRAW_SPLINE", "SHAPE_RECOGNIZER"} -- Don't include coordinate system and default tool
