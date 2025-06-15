@@ -1,5 +1,7 @@
 # xournalpp-shortcuts
 
+Custom fork of another shortcut plugin, [FabianUntermoser/xournalpp-shortcuts](https://gitlab.com/FabianUntermoser/xournalpp-shortcuts).
+
 Install Plugin with `sudo make clean install`.
 
 By default, the Plugin will be installed to `/usr/share/xournalpp/plugins/`.
