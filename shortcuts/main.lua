@@ -7,6 +7,7 @@ function initUi()
   app.registerUi({["menu"] = "Cycle through selection tools", ["callback"] = "select", ["accelerator"] = "s"});
   app.registerUi({["menu"] = "Cycle through eraser type", ["callback"] = "eraser", ["accelerator"] = "e"});
   app.registerUi({["menu"] = "Cycle through drawing type", ["callback"] = "drawingtype", ["accelerator"] = "v"});
+  app.registerUi({["menu"] = "Toggle drawing type", ["callback"] = "nodrawingtype", ["accelerator"] = "<Shift>v"});
   app.registerUi({["menu"] = "Cycle through colors", ["callback"] = "color", ["accelerator"] = "c"});
   app.registerUi({["menu"] = "Toggle Scrolling", ["callback"] = "scroll", ["accelerator"] = "b"});
 end
@@ -15,6 +16,7 @@ end
 local currentFill = false
 local currentRotsnap = false
 local currentGridsnap = false
+local currentDrawingtypeToggle = true
 
 function gridsnap()
   currentGridsnap = not currentGridsnap
@@ -107,6 +109,12 @@ function drawingtype()
   currentDrawingtype = currentDrawingtype % #drawingtypeList + 1
   app.uiAction({["action"] = "ACTION_" .. drawingtypeList[currentDrawingtype]})
   print("ACTION_" .. drawingtypeList[currentDrawingtype])
+end
+
+function nodrawingtype()
+  currentDrawingtypeToggle = not currentDrawingtypeToggle
+  app.uiAction({["action"] = "ACTION_" .. drawingtypeList[currentDrawingtype], ["enabled"] = currentDrawingtypeToggle})
+  print("ACTION_" .. drawingtypeList[currentDrawingtype] .. " = " .. tostring(currentDrawingtypeToggle))
 end
 
 function scroll()
