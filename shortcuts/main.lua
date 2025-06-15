@@ -1,14 +1,14 @@
 function initUi()
-  app.registerUi({["menu"] = "Grid snapping on/off", ["callback"] = "gridsnap", ["accelerator"] = "<Control><Shift>g"});
-  app.registerUi({["menu"] = "Rotation snapping on/off", ["callback"] = "rotsnap", ["accelerator"] = "<Control><Shift>r"});
-  app.registerUi({["menu"] = "Fill on/off", ["callback"] = "fill", ["accelerator"] = "<Control><Shift>f"});
-  app.registerUi({["menu"] = "Cycle through tools", ["callback"] = "tool", ["accelerator"] = "<Control><Shift>t"});
-  app.registerUi({["menu"] = "Cycle through line style", ["callback"] = "linestyle", ["accelerator"] = "<Control><Shift>l"});
-  app.registerUi({["menu"] = "Cycle through selection tools", ["callback"] = "select", ["accelerator"] = "<Control><Shift>s"});
-  app.registerUi({["menu"] = "Cycle through eraser type", ["callback"] = "eraser", ["accelerator"] = "<Control><Shift>e"});
-  app.registerUi({["menu"] = "Cycle through drawing type", ["callback"] = "drawingtype", ["accelerator"] = "<Control><Shift>v"});
-  app.registerUi({["menu"] = "Cycle through colors", ["callback"] = "color", ["accelerator"] = "<Control><Shift>c"});
-  app.registerUi({["menu"] = "Toggle Scrolling", ["callback"] = "scroll", ["accelerator"] = "<Control><Shift>b"});
+  -- app.registerUi({["menu"] = "Grid snapping on/off", ["callback"] = "gridsnap", ["accelerator"] = "g"});
+  -- app.registerUi({["menu"] = "Rotation snapping on/off", ["callback"] = "rotsnap", ["accelerator"] = "r"});
+  app.registerUi({["menu"] = "Fill on/off", ["callback"] = "fill", ["accelerator"] = "f"});
+  app.registerUi({["menu"] = "Cycle through tools", ["callback"] = "tool", ["accelerator"] = "t"});
+  app.registerUi({["menu"] = "Cycle through line style", ["callback"] = "linestyle", ["accelerator"] = "l"});
+  app.registerUi({["menu"] = "Cycle through selection tools", ["callback"] = "select", ["accelerator"] = "s"});
+  app.registerUi({["menu"] = "Cycle through eraser type", ["callback"] = "eraser", ["accelerator"] = "e"});
+  app.registerUi({["menu"] = "Cycle through drawing type", ["callback"] = "drawingtype", ["accelerator"] = "v"});
+  app.registerUi({["menu"] = "Cycle through colors", ["callback"] = "color", ["accelerator"] = "c"});
+  app.registerUi({["menu"] = "Toggle Scrolling", ["callback"] = "scroll", ["accelerator"] = "b"});
 end
 
 
